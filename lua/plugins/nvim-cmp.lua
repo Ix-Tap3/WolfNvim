@@ -47,30 +47,32 @@ return {
       },
 
       -- sources pour l'autocompletion
-      sources = cmp.config.sources({
-        { name = "nvim_lua" },
-        { name = "luasnip" }, -- snippets
-        { name = "buffer" }, -- texte du buffer courant
-        { name = "path" }, -- chemins dy système de fichier
-        { name = "emoji" }, -- emojis
-      }),
+	  sources = cmp.config.sources({
+		  { name = "nvim_lsp" }, -- lsp
+		  { name = "nvim_lua" },
+		  { name = "luasnip" }, -- snippets
+		  { name = "buffer" }, -- texte du buffer courant
+		  { name = "path" }, -- chemins dy système de fichier
+		  { name = "emoji" }, -- emojis
+	  }),
 
-      formatting = {
-        -- Comportement par défaut
-        expandable_indicator = true,
-        -- Champs affichés par défaut
-        fields = { "abbr", "kind", "menu" },
-        format = lspkind.cmp_format({
-          mode = "symbol_text",
-          -- On suffixe chaque entrée par son type
-          menu = {
-            buffer = "[Buffer]",
-            luasnip = "[LuaSnip]",
-            nvim_lua = "[Lua]",
-            path = "[Path]",
-            emoji = "[Emoji]",
-          },
-        }),
+	  formatting = {
+		  -- Comportement par défaut
+		  expandable_indicator = true,
+		  -- Champs affichés par défaut
+		  fields = { "abbr", "kind", "menu" },
+		  format = lspkind.cmp_format({
+			  mode = "symbol_text",
+			  -- On suffixe chaque entrée par son type
+			  menu = {
+				  nvim_lsp = "[LSP]",
+				  buffer = "[Buffer]",
+				  luasnip = "[LuaSnip]",
+				  nvim_lua = "[Lua]",
+				  path = "[Path]",
+				  emoji = "[Emoji]",
+			  },
+		  }),
       },
     })
 
