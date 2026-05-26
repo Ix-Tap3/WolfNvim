@@ -30,6 +30,8 @@ return {
         "typescript",
         "vim",
         "yaml",
+		"c",
+		"cpp",
       },
       -- lorse de l'appui sur <Ctrl-space> sélectionne le bloc
       -- courant spécifique au langage de programmation
