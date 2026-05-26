@@ -16,18 +16,18 @@ opt.smartcase = true -- Disable ignorecase when using Uppercase
 opt.hlsearch = true
 
 --backspace
-opt.backspace = ¨indent,eol,start¨
+opt.backspace = "indent,eol,start"
 
 -- Skin
 opt.cursorline = true
 opt.termguicolors = true
-opt.background = ¨dark¨
-opt.signcolumn = ¨yes¨
+opt.background = "dark"
+opt.signcolumn = "yes"
 opt.list = true
 opt.listchars:append({ nbsp = "␣", trail = "•", precedes = "«", extends = "»", tab = "> " })
 
 -- clipboard
-opt.clipboard = ¨unnamedplus¨
+opt.clipboard = "unnamedplus"
 
 -- split
 opt.splitright = true
