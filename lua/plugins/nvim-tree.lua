@@ -6,14 +6,18 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require("nvim-tree").setup({})
+    require("nvim-tree").setup({
+		on_attach = function(bufnr)
+			local api = require("nvim-tree.api")
+			local opts = function(desc)
+				return { desc = desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+			end
 
-    vim.keymap.set(
-      "n",
-      "<leader>e",
-      "<cmd>NvimTreeFindFileToggle<CR>",
-      { desc = "Ouverture/fermeture de l'explorateur de fichiers" }
-    )
+			api.map.on_attach.default(bufnr)
+			vim.keymap.set("n", "v", api.node.open.vertical, opts("Open vertical split"))
+			vim.keymap.set("n", "h", api.node.open.horizontal, opts("Open horizontal split"))
+		end
+	})
   end,
 }
 
