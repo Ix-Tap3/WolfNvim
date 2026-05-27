@@ -10,6 +10,7 @@ keymap("n", "<C-l>", "<C-w>l", {desc = "Focus to the right Window", silent = tru
 keymap("n", "<C-j>", "<C-w>j", {desc = "Focus to the bottom Window", silent = true})
 keymap("n", "C-k>", "C-w>k", {desc = "Focus to the top Window", silent = true})
 keymap("n", "<C-s>", "<cmd>w<CR>", {desc = "Save current file", silent = true})
+keymap("n", "<leader>q", "<cmd>quitall<CR>", {desc = "Quit all files and nvim", silent = true})
 
 -- Bufferline keymap
 keymap("n", "<leader>bo", "<cmd>BufferLineCloseOthers<CR>", {desc = "Close all other visible buffers", silent = true})
