@@ -36,7 +36,6 @@ opt.splitbelow = true
 -- Global options
 opt.swapfile = false
 opt.undofile = true
+opt.timeoutlen = 300
 
 opt.iskeyword:append("-")
-
-
