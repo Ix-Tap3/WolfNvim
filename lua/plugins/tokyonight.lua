@@ -5,7 +5,7 @@ return {
   opts = {},
   config = function()
     -- chargement du thème
-    vim.cmd([[colorscheme tokyonight]])
+    vim.cmd([[colorscheme tokyonight-night]])
   end,
 }
 
