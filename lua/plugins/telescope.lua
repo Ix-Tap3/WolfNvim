@@ -19,7 +19,9 @@ return {
         selection_caret = " ",
         path_display = { "smart" },
         file_ignore_patterns = { ".git/", "node_modules" },
-
+		preview = {
+			treesitter = false,
+		},
         mappings = {
           i = {
             ["<C-j>"] = actions.move_selection_next,

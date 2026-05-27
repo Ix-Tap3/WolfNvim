@@ -7,6 +7,8 @@ keymap("n", "-", vim.cmd.Ex, {desc = "return to file explorator"})
 keymap("n", "<leader>pv", vim.cmd.Ex, {desc = "return to file explorator"})
 keymap("n", "<C-h>", "<C-w>h", {desc = "Focus to the left Window", silent = true})
 keymap("n", "<C-l>", "<C-w>l", {desc = "Focus to the right Window", silent = true})
+keymap("n", "<C-j>", "<C-w>j", {desc = "Focus to the bottom Window", silent = true})
+keymap("n", "C-k>", "C-w>k", {desc = "Focus to the top Window", silent = true})
 keymap("n", "<C-s>", "<cmd>w<CR>", {desc = "Save current file", silent = true})
 
 -- Bufferline keymap
